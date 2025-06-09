@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:topstretching/core/services/di_instance.dart';
+import 'package:topstretching/features/splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await serviceLocator();
   runApp(const MainApp());
 }
 
@@ -10,11 +14,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
     );
   }
 }
