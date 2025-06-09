@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:topstretching/core/services/di_instance.dart';
 import 'package:topstretching/features/auth/presentation/blocs/auth_bloc.dart';
 import 'package:topstretching/features/auth/presentation/screens/login_screen.dart';
+import 'package:topstretching/features/auth/presentation/screens/register_screen.dart';
 import 'package:topstretching/features/splash_screen.dart';
 
 void main() async {
@@ -25,7 +26,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
+      home: const RegisterScreen(),
     );
   }
 }
